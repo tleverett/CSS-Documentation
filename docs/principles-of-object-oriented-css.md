@@ -1,6 +1,6 @@
 # Principles of Object Oriented CSS
 
-# SOLID
+## SOLID
 
 [**S**ingle Responsibility Principle][S]  
 [**O**pen/Closed Principle][O]  
