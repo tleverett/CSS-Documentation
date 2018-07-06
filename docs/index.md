@@ -12,7 +12,7 @@ After reading through this documentation you should have a clear understanding o
 
 ## [Techniques][tech]
 
-<!-- ## [Princples of Imperative CSS][pics] -->
+<!-- ## [Princples of Imperative/Procedural/Structured/Modular CSS][pics] -->
 
 ## [Principles of Object Oriented CSS][poo]
 

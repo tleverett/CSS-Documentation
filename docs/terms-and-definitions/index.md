@@ -16,6 +16,8 @@ Many of these terms may be confused for other similar-sounding concepts. In orde
 
 ## [BEM][bem]
 
+## [Declarations][declarations]
+
 ## ITCSS
 
 ## [MAY][rfc2119]
@@ -50,6 +52,7 @@ Many of these terms may be confused for other similar-sounding concepts. In orde
 
 [at-rules]: at-rules
 [bem]: bem
+[declarations]: declarations
 [object-oriented-css]: object-oriented-css
 [oocss]: oocss
 [properties]: properties
