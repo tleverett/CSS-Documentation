@@ -2,4 +2,10 @@
 
 # Statements
 
-At-rules and Rules
+There are two kinds of statements:
+
+ * [At-rules][at-rules]
+ * [Rule Sets][rules]
+
+[at-rules]: at-rules
+[rules]: rules
