@@ -22,6 +22,22 @@ Rejected options:
  * Templates/classes - "templates" are used in HTML and too many other contexts to be useful
 -->
 
+## What is an Object?
+
+Before we can start applying object-oriented principles to CSS, we need to have a solid understanding of what is an object _really_?
+
+In class-based object-oriented programming paradigms an object is an instance of a class (OOP). These instances are collections of class-members which can include:
+
+ * fields
+ * variables
+ * properties
+ * data structures
+ * functions
+ * methods
+ * procedures
+
+Since there are a lot of variations in terminology here we can simplify things greatly when we [consider all class-members to be functions or special types of functions][cmf].
+
 ## SOLID
 
 [**S**ingle Responsibility Principle][S]  
@@ -36,5 +52,6 @@ Rejected options:
 [I]: interface-segregation-principle
 [D]: dependency-inversion-principle
 
+[cmf]: class-members-as-functions
 [object-oriented-css]: ../terms-and-definitions/object-oriented/css
 [oocss]: ../terms-and-definitions/oocss
