@@ -1,3 +1,3 @@
-<sub>/ [CSS Documentation](..) / [Terms and Definitions](.) / Object Oriented CSS</sub>
+<sub>/ [CSS Documentation](..) / [Terms and Definitions](.) / Object-Oriented CSS</sub>
 
-# Object Oriented CSS
+# Object-Oriented CSS

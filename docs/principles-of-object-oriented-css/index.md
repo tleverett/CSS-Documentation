@@ -1,6 +1,8 @@
-<sub>/ [CSS Documentation](..) / Principles of Object Oriented CSS</sub>
+<sub>/ [CSS Documentation](..) / Principles of Object-Oriented CSS</sub>
 
-# Principles of Object Oriented CSS
+# Principles of Object-Oriented CSS
+
+When talking about Object-Oriented CSS
 
 ## SOLID
 

@@ -14,7 +14,7 @@ After reading through this documentation you should have a clear understanding o
 
 <!-- ## [Princples of Imperative/Procedural/Structured/Modular CSS][pics] -->
 
-## [Principles of Object Oriented CSS][poo]
+## [Principles of Object-Oriented CSS][poo]
 
 [issues]: https://github.com/tleverett/CSS-Documentation/issues/new
 [pedantry]: terms-and-definitions

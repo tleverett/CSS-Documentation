@@ -26,7 +26,7 @@ Many of these terms may be confused for other similar-sounding concepts. In orde
 
 ## [MUST NOT][rfc2119]
 
-## [Object Oriented CSS][object-oriented-css]
+## [Object-Oriented CSS][object-oriented-css]
 
 ## [OOCSS][oocss]
 
