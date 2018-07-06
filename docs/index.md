@@ -10,10 +10,13 @@ After reading through this documentation you should have a clear understanding o
 
 ## [Terms and Definitions][pedantry]
 
+## [Techniques][tech]
+
 <!-- ## [Princples of Imperative CSS][pics] -->
 
 ## [Principles of Object Oriented CSS][poo]
 
+[issues]: https://github.com/tleverett/CSS-Documentation/issues/new
 [pedantry]: terms-and-definitions
 [poo]: principles-of-object-oriented-css
-[issues]: https://github.com/tleverett/CSS-Documentation/issues/new
+[tech]: techniques
