@@ -5,7 +5,7 @@
 ## SOLID
 
 [**S**ingle Responsibility Principle][S]  
-[**O**pen/Closed Principle][O]  
+[**O**pen&ndash;Closed Principle][O]  
 [**L**iskov Substitution Principle][L]  
 [**I**nterface Segregation Principle][I]  
 [**D**ependency Inversion Principle][D]
