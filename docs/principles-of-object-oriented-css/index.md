@@ -26,7 +26,7 @@ Rejected options:
 
 Before we can start applying object-oriented principles to CSS, we need to have a solid understanding of what is an object _really_?
 
-In class-based object-oriented programming paradigms an object is an instance of a class (OOP). These instances are collections of class-members which can include:
+In class-based object-oriented programming paradigms an object is an instance of a class (OOP). These instances are collections of class-members in a shared context which can include:
 
  * fields
  * variables
@@ -36,7 +36,51 @@ In class-based object-oriented programming paradigms an object is an instance of
  * methods
  * procedures
 
-Since there are a lot of variations in terminology here we can simplify things greatly when we [consider all class-members to be functions or special types of functions][cmf].
+Since there are a lot of variations in terminology here, we can simplify things greatly when we [consider all class-members to be functions or special types of functions][cmf].
+
+So really, objects are collections of functions in a shared context.
+
+And since we're already describing everything as a function, we can consider the constructor to be a function that creates a new context for the collection of functions.
+
+<!-- Insert Boy, that escalated quickly gif -->
+
+## So&hellip;how does all of this apply to CSS?
+
+Despite CSS being a declarative language, we can treat CSS [rules][rules] as declaring functions, and their usage within HTML as an invocation of the declared function.
+
+Here is an example of a JS function declaration being invoked by HTML:
+
+```js
+// example.js
+function example () {
+  document.body.style.backgroundColor = 'red'
+}
+```
+
+```html
+<!DOCTYPE>
+<title>Example</title>
+<script src="example.js"></script>
+<body onload="example()">
+</body>
+```
+
+Here is an example of a CSS function being invoked by HTML:
+
+```css
+/* example.css */
+.example {
+  background-color: red;
+}
+```
+
+```html
+<!DOCTYPE>
+<title>Example</title>
+<script src="example.js"></script>
+<body class="example">
+</body>
+```
 
 ## SOLID
 
@@ -55,3 +99,4 @@ Since there are a lot of variations in terminology here we can simplify things g
 [cmf]: class-members-as-functions
 [object-oriented-css]: ../terms-and-definitions/object-oriented/css
 [oocss]: ../terms-and-definitions/oocss
+[rules]: ../terms-and-definitions/rules
