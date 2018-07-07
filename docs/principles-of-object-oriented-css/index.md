@@ -38,11 +38,11 @@ In class-based object-oriented programming paradigms an object is an instance of
 
 Since there are a lot of variations in terminology here, we can simplify things greatly when we [consider all class-members to be functions or special types of functions][cmf].
 
-So really, objects are collections of functions in a shared context.
+So really, **objects are collections of functions applied to a shared context**.
 
 And since we're already describing everything as a function, we can consider the constructor to be a function that creates a new context for the collection of functions.
 
-<!-- Insert Boy, that escalated quickly gif -->
+<!-- Insert "Boy, that escalated quickly" gif -->
 
 ## So&hellip;how does all of this apply to CSS?
 
@@ -65,7 +65,7 @@ function example () {
 </body>
 ```
 
-Here is an example of a CSS function being invoked by HTML:
+Here is an example of a CSS "function" being invoked by HTML:
 
 ```css
 /* example.css */
@@ -81,6 +81,8 @@ Here is an example of a CSS function being invoked by HTML:
 <body class="example">
 </body>
 ```
+
+So with our abstract definition of "object" and our ability to create "functions" in CSS, let's look at some ways we can create collections of functions and new contexts.
 
 ## SOLID
 
