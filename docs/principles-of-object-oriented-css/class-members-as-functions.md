@@ -1,3 +1,5 @@
+<sub>/ [CSS Documentation](..) / [Principles of Object-Oriented CSS](.) / Class Members as Functions</sub>
+
 # Class Members as Functions
 
 > It's turtles all the way down
@@ -5,6 +7,10 @@
 The jump for methods and procedures to be considered functions should be reasonably self-explanatory. They take input, and produce output.
 
 For fields, properties and the like it can be a little less clear, so for clarity lets look at some simple examples using C#.
+
+<!--
+Maybe update examples to use JS instead?
+-->
 
 To start we declare a simple class (OOP) with a field:
 
