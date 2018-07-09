@@ -129,7 +129,7 @@ Example.prototype.c = function () {...}
 ...
 ```
 
-In CSS there's no real restriction on how "functions" are declared or where they're used, so if we want to follow JavaScript's lead we can name our "functions" similarly:
+In CSS there's no real restriction on how "functions" are declared or where they're used, so if we want to follow JavaScript's lead we can name our "functions" similarly\*:
 
 ```css
 .Example {...}
@@ -138,6 +138,8 @@ In CSS there's no real restriction on how "functions" are declared or where they
 .Example_prototype_c {...}
 ...
 ```
+
+<sub>\* here `_` is used to replace `.` as period characters would have to be escaped, which would otherwise look something like `.Example\.prototype\.a`. This would certainly be a source of confusion and bugs. Sometimes JS documentation replaces `prototype` with `#` (`Example#a`), which would be convenient if `#` didn't have to be replaced as well (`.Example\#a`).</sub>
 
 Now that we've mimicked the JS format, we can clean things up a bit. `prototype` is redundant and unnecessary:
 
@@ -152,6 +154,29 @@ Now that we've mimicked the JS format, we can clean things up a bit. `prototype`
 With this simplification, we can generalize the rule for creating a context within CSS.
 
 In object-oriented CSS, plain classes (CSS) can create a new context. Other classes (CSS) prefixed with the given context name create the collection of functions needed to create an "object".
+
+## Using declared classes (OOP)
+
+When a class (OOP) has been declared in JavaScript, using it involves creating an instance before calling any of its functions:
+
+```js
+const example = new Example()
+example.a()
+example.b()
+example.c()
+...
+```
+
+When a class (OOP) has been declared in CSS, using it should involve creating an instance before calling any of its functions:
+
+```html
+<div class="Example">
+  <div class="Example_a">...</div>
+  <div class="Example_b">...</div>
+  <div class="Example_c">...</div>
+  ...
+</div>
+```
 
 ## SOLID
 
