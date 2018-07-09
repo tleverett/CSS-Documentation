@@ -58,7 +58,7 @@ function example () {
 ```
 
 ```html
-<!DOCTYPE>
+<!DOCTYPE html>
 <title>Example</title>
 <script src="example.js"></script>
 <body onload="example()">
@@ -75,7 +75,7 @@ Here is an example of a CSS "function" being invoked by HTML:
 ```
 
 ```html
-<!DOCTYPE>
+<!DOCTYPE html>
 <title>Example</title>
 <script src="example.js"></script>
 <body class="example">
