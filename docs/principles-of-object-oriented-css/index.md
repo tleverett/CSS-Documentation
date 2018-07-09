@@ -2,11 +2,31 @@
 
 # Principles of Object-Oriented CSS
 
-## Why would you want to?
+This section explores the abstract principles behind [object-oriented CSS][object-oriented-css]. Understanding these principles helps to properly apply CSS methodologies that rely on object-oriented structures, such as [BEM][bem]. More importantly, these principles can be selectively remixed into different variations to create custom methodologies that best suit the needs of a given website.
+
+## When should I use object-oriented CSS?
+
+Object-oriented CSS methodologies fit best in large-scale projects where many different complex components need to be composed together.
+
+Projects where multiple trained developers need to simultaneously make style changes benefit greatly from the structure of object-oriented CSS. The namespaced nature of object-oriented CSS helps to prevent accidental side-effects between disparate components.
+
+Projects with template-driven HTML benefit significantly from object-oriented CSS. Server-rendered templating languages&mdash;such as PHP, Twig, ASP.NET, and Razor&mdash;and client-rendered templating languages&mdash;such as Mustache, Handlebars, EJS, and Pug&mdash;all work great with object-oriented CSS because of how individual templates can be paired to individual objects.
+
+Rapid prototyping benefits from object-oriented CSS when the individual components are well-defined, such as when building new forms using existing field structures.
+
+## When should I **not** use object-oriented CSS?
+
+Small projects with few to no components often don't need the overhead of object-oriented CSS.
+
+Projects with few or untrained developers may not benefit from the rigidity of an object-oriented CSS methodology. Simple linting tools and techniques such as Atomic Design and ITCSS may produce better results with less stress.
+
+Projects with _hand-crafted HTML may be actively harmed by the use of object-oriented CSS methodologies_ due to its verbosity. The repetetive nature of object-oriented CSS puts it at a significantly higher risk for <!-- this is intentional -->tyops and other mistakes.
+
+Rapid prototyping is slowed by object-oriented CSS when the individual components are poorly-defined or are not to be reused, such as when building a bespoke landing page for a marketing initiative.
 
 ## Terminology
 
-When talking about [Object-Oriented CSS][object-oriented-css] it's important to first note the historic usage by Nicole Sullivan for [OOCSS][oocss]. While the names overlap, this document is using the generic meaning of "Object-Oriented" taken from "Object-Oriented Programming".
+When talking about object-oriented CSS it's important to first note the historic usage by Nicole Sullivan for [OOCSS][oocss]. While the names overlap, this document is using the generic meaning of "Object-Oriented" taken from "Object-Oriented Programming".
 
 To further add to the confusion, many OOP languages use the term "class" to refer to a template used to create objects. In CSS "class" typically refers to a selector that selects nodes based on the space-separated list of text in the nodes' class attributes.
 
@@ -167,7 +187,7 @@ example.c()
 ...
 ```
 
-When a class (OOP) has been declared in CSS, using it should involve creating an instance before calling any of its functions:
+When a class (OOP) has been declared in CSS, using it involves creating an instance before calling any of its functions:
 
 ```html
 <div class="Example">
@@ -177,6 +197,8 @@ When a class (OOP) has been declared in CSS, using it should involve creating an
   ...
 </div>
 ```
+
+
 
 ## SOLID
 
@@ -192,6 +214,7 @@ When a class (OOP) has been declared in CSS, using it should involve creating an
 [I]: interface-segregation-principle
 [D]: dependency-inversion-principle
 
+[bem]: ../terms-and-definitions/bem
 [cmf]: class-members-as-functions
 [object-oriented-css]: ../terms-and-definitions/object-oriented/css
 [oocss]: ../terms-and-definitions/oocss
