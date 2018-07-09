@@ -2,6 +2,10 @@
 
 # Principles of Object-Oriented CSS
 
+## Why would you want to?
+
+## Terminology
+
 When talking about [Object-Oriented CSS][object-oriented-css] it's important to first note the historic usage by Nicole Sullivan for [OOCSS][oocss]. While the names overlap, this document is using the generic meaning of "Object-Oriented" taken from "Object-Oriented Programming".
 
 To further add to the confusion, many OOP languages use the term "class" to refer to a template used to create objects. In CSS "class" typically refers to a selector that selects nodes based on the space-separated list of text in the nodes' class attributes.
@@ -22,7 +26,7 @@ Rejected options:
  * Templates/classes - "templates" are used in HTML and too many other contexts to be useful
 -->
 
-## What is an Object?
+## What is an object?
 
 Before we can start applying object-oriented principles to CSS, we need to have a solid understanding of what is an object _really_?
 
@@ -83,6 +87,71 @@ Here is an example of a CSS "function" being invoked by HTML:
 ```
 
 So with our abstract definition of "object" and our ability to create "functions" in CSS, let's look at some ways we can create collections of functions and new contexts.
+
+## Declaring classes (CSS) to create classes (OOP)
+
+The simplest way to create a collection of "functions" in CSS is to just declare a bunch of classes (CSS):
+
+```css
+.a {...}
+.b {...}
+.c {...}
+...
+```
+
+That's nice and all, but that doesn't really help us with creating a new context. It's akin to having just declared a handful of functions in JavaScript:
+
+```js
+function a () {...}
+function b () {...}
+function c () {...}
+...
+```
+
+If we wanted a JS class, we'd do it a bit differently. We'd use a `class` declaration to indicate that the functions share a context:
+
+```js
+class Example {
+  a () {...}
+  b () {...}
+  c () {...}
+  ...
+}
+```
+
+Note that the JS example is really syntactic sugar for:
+
+```js
+function Example () {...}
+Example.prototype.a = function () {...}
+Example.prototype.b = function () {...}
+Example.prototype.c = function () {...}
+...
+```
+
+In CSS there's no real restriction on how "functions" are declared or where they're used, so if we want to follow JavaScript's lead we can name our "functions" similarly:
+
+```css
+.Example {...}
+.Example_prototype_a {...}
+.Example_prototype_b {...}
+.Example_prototype_c {...}
+...
+```
+
+Now that we've mimicked the JS format, we can clean things up a bit. `prototype` is redundant and unnecessary:
+
+```css
+.Example {...}
+.Example_a {...}
+.Example_b {...}
+.Example_c {...}
+...
+```
+
+With this simplification, we can generalize the rule for creating a context within CSS.
+
+In object-oriented CSS, plain classes (CSS) can create a new context. Other classes (CSS) prefixed with the given context name create the collection of functions needed to create an "object".
 
 ## SOLID
 
