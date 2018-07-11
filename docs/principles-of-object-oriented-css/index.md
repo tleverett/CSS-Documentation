@@ -175,6 +175,29 @@ With this simplification, we can generalize the rule for creating a context with
 
 In object-oriented CSS, plain classes (CSS) can create a new context. Other classes (CSS) prefixed with the given context name create the collection of functions needed to create an "object".
 
+### Naming convention doesn't matter
+
+So long as a _consistent_ naming convention is used within a project, the actual way that a class (OOP) and its members are represented are irrelevant.
+
+```css
+.LoremIpsum {...}
+.LoremIpsum_dolorSit {...}
+```
+
+is functionally identical to
+
+```css
+.lorem-ipsum {...}
+.lorem-ipsum__dolor-sit {...}
+```
+
+is functionally identical to
+
+```css
+.lorem_ipsum {...}
+.lorem_ipsum^dolor_sit {...}
+```
+
 ## Using declared classes (OOP)
 
 When a class (OOP) has been declared in JavaScript, using it involves creating an instance before calling any of its functions:
@@ -198,7 +221,87 @@ When a class (OOP) has been declared in CSS, using it involves creating an insta
 </div>
 ```
 
+## Changing state and passing parameters
 
+<!-- Step 1: Intro -->
+
+Unless they encapsulate some form of state, classes (OOP) are not particularly useful. `new Person()` would be equivalent to any other `new Person()` whereas `new Person('Alice')` is obviously different from `new Person('Bob')`. Likewise, `bob.say('Hello')` is different from `bob.say('World')`.
+
+<!-- Step 2: ??? -->
+
+&hellip;
+
+<!-- Step 3: Profit -->
+
+State classes (CSS) can be added to classes (OOP) and their members to produce what amount to parameterized style variations:
+
+```html
+<div class="Modal -opened">
+  ...
+</div>
+<!-- vs -->
+<div class="Modal -closed">
+  ...
+</div>
+```
+
+```css
+.Modal { ... }
+.Modal.-opened { display: block; }
+.Modal.-closed { display: none; }
+```
+
+### Naming convention doesn't matter
+
+These "parameters" should generally be distinct from class (OOP) classes (CSS), but otherwise the naming convention used generally doesn't matter.
+
+The prior example could have as easily been written as:
+
+```html
+<div class="Modal -opened">...</div>
+<!-- or -->
+<div class="Modal opened">...</div>
+<!-- or -->
+<div class="modal --opened">...</div>
+```
+
+### Namespacing parameters
+
+When using parameters selectors can significantly increase in [specificity][specificity].
+
+For example, styling a modal's background while it's open may require using a [selector][selectors] along the lines of:
+
+```css
+.Modal.-opened .Modal_background {...}
+```
+
+Additionally, the use of a descendant selector could cause problems if the component is nested within another of the same component.
+
+While a modal that contains a modal is probably not a good idea from a user-experience perspective, many components make sense as recursively nestable. Accordions, tabs, and menus are just a few examples of components that are regularly recursively nested.
+
+If a modal did contain a child modal and the parent modal is open, it could accidentally open the child modal.
+
+A simple way to work around both the specificity and recursive nesting issues is to namespace the parameters, and propagate them to all class (OOP) members:
+
+```html
+<div class="Modal Modal-open">
+  <div class="Modal_background Modal-open_background">...</div>
+  <div class="Modal_frame Modal-open_frame">
+    lorem ipsum
+    ...
+    <div class="Modal">
+      <div class="Modal_background">...</div>
+      <div class="Modal_frame">...</div>
+    </div>
+  </div>
+</div>
+```
+
+With the parameter being propagated to the class (OOP) members, the selector becomes:
+
+```css
+.Modal-open_background {...}
+```
 
 ## SOLID
 
@@ -219,3 +322,5 @@ When a class (OOP) has been declared in CSS, using it involves creating an insta
 [object-oriented-css]: ../terms-and-definitions/object-oriented/css
 [oocss]: ../terms-and-definitions/oocss
 [rules]: ../terms-and-definitions/rules
+[selectors]: 
+[specificity]: ../terms-and-definitions/specificity
